@@ -1,4 +1,4 @@
-#!/Users/himanshusharma/Desktop/DDEBS/venv/bin/python
+#!/Users/himanshusharma/Desktop/DDEBS/venv/bin/python3.10
 # -*- coding: utf-8 -*-
 import re
 import sys

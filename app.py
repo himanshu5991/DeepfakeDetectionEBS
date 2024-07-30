@@ -18,6 +18,7 @@ model = tf.keras.models.load_model(model_path, custom_objects={'DepthwiseConv2D'
 # Define the allowed extensions for video files
 ALLOWED_EXTENSIONS = {'mp4', 'avi', 'mov', 'mkv'}
 
+
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
@@ -45,6 +46,9 @@ def process_video(video_path):
 
     return video_classification, average_prediction_value
 
+@app.route('/')
+def home():
+    return "Hello, this is your app running!"
 @app.route('/predict', methods=['POST'])
 def predict():
     # Check if the post request has the video file part
@@ -68,5 +72,5 @@ def predict():
         return jsonify({'error': 'File type not allowed'}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8000)))
 
