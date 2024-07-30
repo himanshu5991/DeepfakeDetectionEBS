@@ -1,0 +1,6 @@
+Flask==2.1.1
+numpy==1.23.5
+opencv-python-headless>=4.5.5.62,<4.11
+tensorflow==2.17.0
+werkzeug==2.0.3
+awsebcli
